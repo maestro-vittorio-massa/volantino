@@ -31,15 +31,12 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 
-      - name: Build
-        run: npm run build
-
-      - name: Export static site
+      - name: Build static site
         env:
           # Set your repository name as base path for GitHub Pages with project sites
           # If deploying to user/organization site, leave empty
           NEXT_BASE_PATH: "/${{ github.event.repository.name }}"
-        run: npm run export
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
