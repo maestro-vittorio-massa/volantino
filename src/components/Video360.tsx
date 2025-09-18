@@ -3,7 +3,7 @@
 // Simple YouTube embed replacement to avoid storing video file in the repo
 export default function Video360() {
   return (
-    <section className="min-h-screen w-full flex items-center justify-center bg-black py-6 md:py-10">
+    <section className="min-h-screen w-full flex items-center justify-center bg-black">
       <div className="relative w-full max-w-6xl h-[100vh] md:h-auto">
         <iframe
           className="absolute inset-0 w-full h-full rounded-xl shadow-2xl"
