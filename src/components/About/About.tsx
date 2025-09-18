@@ -13,6 +13,7 @@ import {
   faUserCircle 
 } from '@fortawesome/free-solid-svg-icons'
 import styles from './About.module.css'
+import { assetPath } from '@/lib/assetPath'
 
 export default function About() {
   const journeyItems = [
@@ -111,7 +112,7 @@ export default function About() {
                     <p>{item.content}</p>
                     {item.image && (
                       <Image
-                        src={item.image}
+                        src={assetPath(item.image)}
                         alt={item.imageAlt || ''}
                         width={400}
                         height={300}
@@ -149,7 +150,7 @@ export default function About() {
                   )}
                   {item.image && (
                     <Image
-                      src={item.image}
+                      src={assetPath(item.image)}
                       alt={item.imageAlt || ''}
                       width={250}
                       height={200}

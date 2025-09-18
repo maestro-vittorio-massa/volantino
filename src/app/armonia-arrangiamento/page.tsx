@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Navigation from '@/components/Navigation/Navigation'
 import FloatingParticles from '@/components/FloatingParticles/FloatingParticles'
 import styles from '../discipline-page.module.css'
+import { assetPath } from '@/lib/assetPath'
 
 export default function ArmoniaArrangiamento() {
   useEffect(() => {
@@ -53,7 +54,7 @@ export default function ArmoniaArrangiamento() {
         <div className="hero-background">
           <div 
             className="hero-bg-image"
-            style={{ backgroundImage: 'url(/assets/classical-music.jpg)' }}
+            style={{ backgroundImage: `url(${assetPath('/assets/classical-music.jpg')})` }}
           />
           <div className="hero-bg-overlay" />
         </div>

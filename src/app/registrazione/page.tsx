@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Navigation from '@/components/Navigation/Navigation'
 import FloatingParticles from '@/components/FloatingParticles/FloatingParticles'
 import styles from '../discipline-page.module.css'
+import { assetPath } from '@/lib/assetPath'
 
 export default function Registrazione() {
   useEffect(() => {
@@ -53,7 +54,7 @@ export default function Registrazione() {
         <div className="hero-background">
           <div 
             className="hero-bg-image"
-            style={{ backgroundImage: 'url(/assets/studio.webp)' }}
+            style={{ backgroundImage: `url(${assetPath('/assets/studio.webp')})` }}
           />
           <div className="hero-bg-overlay" />
         </div>

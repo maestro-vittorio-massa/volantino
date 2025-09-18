@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Navigation from '@/components/Navigation/Navigation'
 import FloatingParticles from '@/components/FloatingParticles/FloatingParticles'
 import styles from '../discipline-page.module.css'
+import { assetPath } from '@/lib/assetPath'
 
 export default function Pianoforte() {
   useEffect(() => {
@@ -100,7 +101,7 @@ export default function Pianoforte() {
         <div className="hero-background">
           <div 
             className="hero-bg-image"
-            style={{ backgroundImage: 'url(/assets/piano.jpg)' }}
+            style={{ backgroundImage: `url(${assetPath('/assets/piano.jpg')})` }}
           />
           <div className="hero-bg-overlay" />
         </div>

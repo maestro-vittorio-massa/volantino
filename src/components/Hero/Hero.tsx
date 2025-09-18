@@ -6,6 +6,7 @@ import Link from 'next/link'
 import styles from './Hero.module.css'
 import { faChevronDown, faGuitar, faLayerGroup, faMicrophone, faMusic, faSlidersH } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { assetPath } from '@/lib/assetPath'
 
 export default function Hero() {
   useEffect(() => {
@@ -54,7 +55,7 @@ export default function Hero() {
       <div className={styles.heroBackground}>
         <div 
           className={styles.heroBgImage}
-          style={{ backgroundImage: 'url(/assets/classical-music.jpg)' }}
+          style={{ backgroundImage: `url(${assetPath('/assets/classical-music.jpg')})` }}
         />
         <div className={styles.heroBgOverlay} />
         
@@ -136,7 +137,7 @@ export default function Hero() {
               <div className={styles.heroImage}>
                 <div className={styles.imageGlow}></div>
                 <Image
-                  src="/assets/faccia.jpg"
+                  src={assetPath('/assets/faccia.jpg')}
                   alt="Vittorio Massa"
                   width={500}
                   height={500}

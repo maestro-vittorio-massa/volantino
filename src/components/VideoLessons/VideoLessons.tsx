@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from './VideoLessons.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHourglassHalf, faMobileAlt, faPlayCircle, faUserClock } from '@fortawesome/free-solid-svg-icons'
+import { assetPath } from '@/lib/assetPath'
 
 export default function VideoLessons() {
   return (
@@ -35,7 +36,7 @@ export default function VideoLessons() {
             <div className={styles.videoPlaceholder}>
               <div className={styles.videoThumbnail}>
                 <Image
-                  src="/assets/studio.webp"
+                  src={assetPath('/assets/studio.webp')}
                   alt="Video lezione in studio"
                   width={400}
                   height={300}
