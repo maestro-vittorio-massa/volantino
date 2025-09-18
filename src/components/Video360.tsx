@@ -3,10 +3,10 @@
 // Simple YouTube embed replacement to avoid storing video file in the repo
 export default function Video360() {
   return (
-    <section className="min-h-screen w-full flex items-center justify-center bg-black">
-      <div className="relative w-full max-w-6xl h-[100vh] md:h-auto">
+    <section className="relative w-screen h-screen bg-black p-0 m-0">
+      <div className="absolute inset-0">
         <iframe
-          className="absolute inset-0 w-full h-full rounded-xl shadow-2xl"
+          className="absolute inset-0 w-full h-full"
           src="https://www.youtube.com/embed/oPd0rLVxTU8?rel=0&modestbranding=1&playsinline=1"
           title="YouTube video player"
           frameBorder="0"
