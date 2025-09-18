@@ -1,0 +1,400 @@
+/* Video Lessons Component Styles */
+
+.videoLessons {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 6rem 0;
+}
+
+.sectionBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.bgPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(212, 164, 116, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(184, 134, 11, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(139, 69, 19, 0.06) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 30%, rgba(212, 164, 116, 0.02) 50%, transparent 70%);
+  opacity: 0.9;
+  animation: pattern-float 10s ease-in-out infinite;
+  z-index: 1;
+}
+
+.floatingElementsSecondary {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.floatingDot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: dotFloat 10s ease-in-out infinite;
+}
+
+.dot1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.dot2 {
+  top: 60%;
+  right: 15%;
+  animation-delay: 3s;
+}
+
+.dot3 {
+  top: 80%;
+  left: 80%;
+  animation-delay: 6s;
+}
+
+.sectionMusicNotes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sectionNote {
+  position: absolute;
+  font-size: 1.5rem;
+  color: var(--accent);
+  opacity: 0.4;
+  animation: sectionNoteFloat 15s ease-in-out infinite;
+}
+
+.noteSection1 {
+  top: 30%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.noteSection2 {
+  top: 70%;
+  right: 10%;
+  animation-delay: 7s;
+}
+
+.sectionContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+.titleContainer {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.sectionTitle svg {
+  font-size: 5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.sinusoidLine {
+  width: 200px;
+  height: 2px;
+  background: var(--gradient-wood);
+  margin: 1rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.sinusoidLine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--accent),
+    transparent
+  );
+  animation: sinusoidFlow 3s ease-in-out infinite;
+}
+
+.videoContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.videoPreview {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.videoPlaceholder {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.videoThumbnail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.videoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.playOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.playOverlay svg {
+  font-size: 2.5rem;
+  color: var(--accent);
+  /* margin-left: 5px; */
+  width: 70px;
+  height: 70px;
+}
+
+.videoThumbnail:hover .playOverlay {
+  background: rgba(138, 112, 87, 0.9);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.videoInfo {
+  text-align: left;
+}
+
+.videoInfo h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.videoInfo p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.features {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.feature svg {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.videoCta {
+  margin-top: 3rem;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn:hover:not(.disabled) {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btn.comingSoon {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn svg {
+  font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes dotFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+@keyframes sectionNoteFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-15px) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes sinusoidFlow {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes pattern-float {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .videoContent {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .videoInfo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionContent {
+    padding: 0 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sectionTitle svg {
+    font-size: 3rem;
+  }
+
+  .videoPlaceholder {
+    height: 250px;
+  }
+
+  .videoInfo h3 {
+    font-size: 1.5rem;
+  }
+
+  .videoInfo p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionTitle i {
+    font-size: 2.5rem;
+  }
+
+  .videoPlaceholder {
+    height: 200px;
+  }
+
+  .playOverlay {
+    width: 60px;
+    height: 60px;
+  }
+
+  .playOverlay i {
+    font-size: 2rem;
+  }
+}

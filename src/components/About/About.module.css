@@ -1,0 +1,660 @@
+/* About Component Styles */
+
+.about {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.sectionBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.bgPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(212, 164, 116, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(184, 134, 11, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(139, 69, 19, 0.06) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 30%, rgba(212, 164, 116, 0.02) 50%, transparent 70%);
+  opacity: 0.9;
+  animation: pattern-float 10s ease-in-out infinite;
+  z-index: 1;
+}
+
+.aboutContent {
+  text-align: left;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.sectionTitle svg {
+  font-size: 5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.aboutIntro {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  background: var(--card-bg);
+  padding: 3rem;
+  border-radius: 25px;
+  border: 1px solid var(--border);
+}
+
+.profileImage svg {
+  font-size: 6rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introText h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.introText p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.experienceSection h3{
+  font-size: 2rem;
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding-top: 2.5rem;
+}
+
+.experienceCard {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(20px);
+  position: relative;
+  overflow: hidden;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.experienceCard img {
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 250px;
+  max-height: 300px;
+  padding: 0.75rem;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.experienceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(255, 107, 107, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.experienceCard:hover::before {
+  opacity: 1;
+}
+
+.experienceCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.experienceCard svg {
+  font-size: 4rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  display: block;
+  text-shadow: 0 0 20px rgba(212, 164, 116, 0.3);
+  text-align: center;
+  width: 100%;
+}
+
+.experienceCard h4 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.experienceCard p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.spotifyCard {
+  position: relative;
+  z-index: 3;
+}
+
+.spotifyEmbed {
+  width: 100%;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.spotifyEmbed iframe {
+  border-radius: 12px;
+  background: #191414;
+}
+
+.experienceImage {
+  width: 100%;
+  max-width: 280px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.experienceImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .aboutIntro {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .journeyTimeline {
+    max-width: 800px;
+  }
+
+  .journeyItem {
+    flex-direction: column !important;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .journeyYear {
+    margin: 0 0 2rem 0;
+    min-width: auto;
+  }
+
+  .journeyContent {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .journeyTimeline::before {
+    left: 2rem;
+    transform: none;
+  }
+
+  .journeyItem::before {
+    left: 2rem;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionContent {
+    padding: 0 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sectionTitle svg {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .aboutIntro {
+    padding: 2rem;
+  }
+
+  .introText h3 {
+    font-size: 2rem;
+  }
+
+  .introText p {
+    font-size: 1.1rem;
+  }
+
+  .journeySection h3 {
+    font-size: 2rem;
+  }
+
+  .journeyTimeline {
+    padding: 1rem 0.5rem;
+  }
+
+  .journeyTimeline::before {
+    left: 1.5rem;
+  }
+
+  .journeyItem::before {
+    left: 1.5rem;
+    width: 20px;
+    height: 20px;
+  }
+
+  .journeyYear {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .journeyContent {
+    padding: 2rem;
+  }
+
+  .journeyContent svg {
+    font-size: 3.5rem;
+  }
+
+  .journeyContent p {
+    font-size: 1rem;
+  }
+
+  .experienceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .experienceCard {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionTitle svg {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .aboutIntro {
+    padding: 1.5rem;
+  }
+
+  .introText h3 {
+    font-size: 1.5rem;
+  }
+
+  .introText p {
+    font-size: 1rem;
+  }
+
+  .journeySection h3 {
+    font-size: 1.8rem;
+  }
+
+  .journeyTimeline {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .journeyTimeline::before {
+    left: 1rem;
+  }
+
+  .journeyItem::before {
+    left: 1rem;
+    width: 16px;
+    height: 16px;
+  }
+
+  .journeyYear {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .journeyContent {
+    padding: 1.5rem;
+  }
+
+  .journeyContent svg {
+    font-size: 3rem;
+  }
+
+  .journeyContent p {
+    font-size: 0.9rem;
+  }
+
+  .experienceCard {
+    padding: 1.5rem;
+  }
+
+  .experienceCard svg {
+    font-size: 3.5rem;
+  }
+}
+
+/* Modern Timeline Design - Complete Redesign */
+
+/* Timeline Item */
+.journeyItem:nth-child(odd) .journeyContent {
+  order: 2;
+  margin-left: 3rem;
+}
+
+.journeyItem:nth-child(even) .journeyContent {
+  order: 1;
+  margin-right: 3rem;
+}
+
+.journeyItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.journeySection {
+  margin: 6rem 0;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.journeySection h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: var(--text);
+  position: relative;
+}
+
+.journeySection h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.journeyTimeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Central Timeline Line */
+.journeyTimeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--gradient-primary);
+  transform: translateX(-50%);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+/* Timeline Item Container */
+.journeyItem {
+  position: relative;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 200px;
+}
+
+/* Alternating Layout */
+.journeyItem:nth-child(odd) {
+  flex-direction: row;
+}
+
+.journeyItem:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Timeline Marker */
+.journeyItem::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  background: var(--accent);
+  border: 6px solid var(--bg);
+  border-radius: 50%;
+  z-index: 3;
+  box-shadow: 
+    0 0 0 4px var(--accent),
+    0 0 30px rgba(212, 164, 116, 0.6);
+  transition: all 0.3s ease;
+}
+
+.journeyItem:hover::before {
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 
+    0 0 0 6px var(--accent),
+    0 0 40px rgba(212, 164, 116, 0.8);
+}
+
+/* Year Badge */
+.journeyYear {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--card-bg);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  border: 2px solid var(--accent);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 10px 30px rgba(212, 164, 116, 0.2);
+  min-width: 180px;
+  text-align: center;
+  margin: 0 3rem;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.journeyYear:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(212, 164, 116, 0.3);
+}
+
+/* Content Card */
+.journeyContent {
+  flex: 1;
+  background: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 25px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  max-width: 500px;
+}
+
+/* Content Card Top Border */
+.journeyContent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 25px 25px 0 0;
+}
+
+/* Hover Effects */
+.journeyContent:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent);
+}
+
+/* Icon Styling */
+.journeyContent svg {
+  font-size: 4rem;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  display: block;
+  text-shadow: 0 0 20px rgba(212, 164, 116, 0.5);
+  transition: all 0.3s ease;
+}
+
+.journeyContent:hover svg {
+  transform: scale(1.1);
+  text-shadow: 0 0 30px rgba(212, 164, 116, 0.8);
+}
+
+/* Text Styling */
+.journeyContent p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* Image Styling */
+.timelineImage {
+  margin-top: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.timelineImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Additional utility classes for better spacing */
+.sectionContent {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.titleContainer {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle svg {
+  color: var(--accent);
+  text-shadow: 0 0 20px rgba(212, 164, 116, 0.5);
+  font-size: 5rem;
+}
+
+/* Animation for timeline items */
+@keyframes timelineSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.journeyItem {
+  animation: timelineSlideIn 0.6s ease-out forwards;
+}
+
+.journeyItem:nth-child(1) { animation-delay: 0.1s; }
+.journeyItem:nth-child(2) { animation-delay: 0.2s; }
+.journeyItem:nth-child(3) { animation-delay: 0.3s; }
+.journeyItem:nth-child(4) { animation-delay: 0.4s; }
+.journeyItem:nth-child(5) { animation-delay: 0.5s; }

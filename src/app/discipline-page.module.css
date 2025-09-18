@@ -1,0 +1,503 @@
+/* Discipline Page Styles */
+
+.disciplineHero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.disciplineTitle {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--text);
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disciplineTitle i {
+  color: var(--accent);
+  font-size: 4rem;
+}
+
+.disciplinePreview {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 25px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.instrumentIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.instrumentIcons i {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+.disciplinePreview h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.disciplinePreview p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.disciplineContent {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.contentGrid {
+  display: grid !important;
+  grid-template-columns: repeat(1, 1fr) !important;
+  gap: 2rem !important;
+  max-width: 100vw !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.contentCard {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 25px;
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.contentCard:hover {
+  transform: translateY(-8px) rotateX(2deg) rotateY(2deg);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-hover), 0 0 30px rgba(212, 164, 116, 0.1);
+}
+
+/* Card Images */
+.cardImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.cardImage:hover {
+  transform: scale(1.05) rotateY(5deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.imagePlaceholder {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.equipmentImage {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.equipmentImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.equipmentImg:hover {
+  transform: scale(1.1) rotateX(5deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardHeader {
+  background: var(--gradient-primary);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cardHeader i {
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.cardHeader h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.cardContent {
+  padding: 2rem;
+}
+
+.cardContent p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.cardContent h4 {
+  color: var(--text);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.targetList {
+  list-style: none;
+  padding: 0;
+}
+
+.targetList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.targetList li i {
+  color: var(--accent);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.programGrid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: repeat(2, auto) !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.programItem {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: 1rem !important;
+  padding: 1.5rem !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-radius: 15px !important;
+  border: 1px solid var(--border) !important;
+  transition: all 0.3s ease !important;
+  min-height: 100px !important;
+  justify-content: center !important;
+}
+
+.programItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(5px);
+}
+
+.programItem i {
+  color: var(--accent);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.programItem span {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.equipmentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.equipmentItem {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  position: relative;
+  overflow: hidden;
+}
+
+.equipmentItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 164, 116, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.equipmentItem:hover::before {
+  left: 100%;
+}
+
+.equipmentItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-5px) rotateX(3deg) rotateY(3deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(212, 164, 116, 0.1);
+}
+
+.equipmentItem i {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.equipmentItem h4 {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.equipmentItem p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.objectivesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.objectiveItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.objectiveItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(5px);
+}
+
+.objectiveItem i {
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.objectiveItem h4 {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.objectiveItem p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.disciplineCta {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.ctaContent {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.ctaContent {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.ctaContent svg {
+  font-size: 5rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--gradient-primary);
+  color: var(--bg);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(212, 164, 116, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(212, 164, 116, 0.4);
+  background: var(--gradient-secondary);
+}
+
+.ctaButton.primary {
+  background: var(--gradient-music);
+  color: var(--text);
+}
+
+.ctaButton.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid var(--accent);
+}
+
+.ctaButton.secondary:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Responsive Design for Discipline Pages */
+@media (max-width: 1400px) {
+  .contentGrid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .disciplineTitle {
+    font-size: 2.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .disciplineTitle i {
+    font-size: 3rem;
+  }
+  
+  .contentGrid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .programGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+  
+  .equipmentGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .ctaContent h2 {
+    font-size: 2rem;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ctaButton {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .disciplineTitle {
+    font-size: 2rem;
+  }
+  
+  .disciplineTitle i {
+    font-size: 2.5rem;
+  }
+  
+  .cardContent {
+    padding: 1.5rem;
+  }
+  
+  .programItem {
+    padding: 0.75rem;
+  }
+  
+  .equipmentItem {
+    padding: 1rem;
+  }
+  
+  .objectiveItem {
+    padding: 1rem;
+  }
+}

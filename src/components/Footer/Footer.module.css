@@ -1,0 +1,133 @@
+/* Footer Component Styles */
+
+.siteFooter {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 0;
+  text-align: center;
+}
+
+.cta {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 5rem;
+  color: var(--accent);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  gap: 1rem;
+}
+
+.ctaContent h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.ctaContent p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--gradient-primary);
+  color: var(--bg);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(212, 164, 116, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(212, 164, 116, 0.4);
+  background: var(--gradient-secondary);
+}
+
+.ctaButton.primary {
+  background: var(--gradient-primary);
+}
+
+.ctaButton.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.ctaButton.secondary:hover {
+  background: var(--card-bg);
+  border-color: var(--accent);
+}
+
+.footerBottom {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cta {
+    padding: 3rem 1rem;
+  }
+
+  .ctaContent h3 {
+    font-size: 2rem;
+  }
+
+  .ctaContent p {
+    font-size: 1rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 2rem 1rem;
+  }
+
+  .ctaContent h3 {
+    font-size: 1.5rem;
+  }
+
+  .ctaContent svg {
+    font-size: 3rem;
+  }
+
+  .ctaButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
