@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "export": "NEXT_TELEMETRY_DISABLED=1 next export -o dist",
+    "export": "NEXT_TELEMETRY_DISABLED=1 next export",
     "start": "next start",
     "lint": "eslint"
   },
