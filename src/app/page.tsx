@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 // import Link from 'next/link' // Unused for now
 // import Video360 from '@/components/Video360'
 import Hero from '@/components/Hero/Hero'
-import VideoLessons from '@/components/VideoLessons/VideoLessons'
+/* import VideoLessons from '@/components/VideoLessons/VideoLessons' */
 import About from '@/components/About/About'
 import Contact from '@/components/Contact/Contact'
 import Footer from '@/components/Footer/Footer'
