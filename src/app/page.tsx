@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 // import Image from 'next/image' // Unused for now
 // import Link from 'next/link' // Unused for now
-import Video360 from '@/components/Video360'
+// import Video360 from '@/components/Video360'
 import Hero from '@/components/Hero/Hero'
 import VideoLessons from '@/components/VideoLessons/VideoLessons'
 import About from '@/components/About/About'
@@ -31,20 +31,17 @@ export default function Home() {
 
   return (
     <main className="mt-0">
-      {/* 360° Video First Section */}
-      <Video360 />
-
       {/* Hero Section */}
       <Hero />
 
       {/* Video Lessons Section */}
-      <VideoLessons />
-
-      {/* About Section */}
-      <About />
+      {/* <VideoLessons /> */}
 
       {/* Contact Section */}
       <Contact />
+
+      {/* About Section */}
+      <About />
 
       {/* Footer */}
       <Footer currentYear={currentYear} />

@@ -99,32 +99,7 @@ export default function About() {
             </div>
           </div>
           
-          <div className={styles.journeySection}>
-            <h3>Formazione</h3>
-            <div className={styles.journeyTimeline}>
-              {journeyItems.map((item, index) => (
-                <div key={index} className={styles.journeyItem}>
-                  <div className={styles.journeyYear}>
-                    {item.year}
-                  </div>
-                  <div className={styles.journeyContent}>
-                    <FontAwesomeIcon icon={item.icon} />
-                    <p>{item.content}</p>
-                    {item.image && (
-                      <Image
-                        src={assetPath(item.image)}
-                        alt={item.imageAlt || ''}
-                        width={400}
-                        height={300}
-                        className={styles.timelineImage}
-                      />
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
+          {/* esperienze */}
           <div className={styles.experienceSection}>
             <h3>Esperienze Lavorative</h3>
             <div className={styles.experienceGrid}>
@@ -158,6 +133,33 @@ export default function About() {
                     />
                   )}
                   <p>{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* timeline */}
+          <div className={styles.journeySection}>
+            <h3>Formazione</h3>
+            <div className={styles.journeyTimeline}>
+              {journeyItems.map((item, index) => (
+                <div key={index} className={styles.journeyItem}>
+                  <div className={styles.journeyYear}>
+                    {item.year}
+                  </div>
+                  <div className={styles.journeyContent}>
+                    <FontAwesomeIcon icon={item.icon} />
+                    <p>{item.content}</p>
+                    {item.image && (
+                      <Image
+                        src={assetPath(item.image)}
+                        alt={item.imageAlt || ''}
+                        width={400}
+                        height={300}
+                        className={styles.timelineImage}
+                      />
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

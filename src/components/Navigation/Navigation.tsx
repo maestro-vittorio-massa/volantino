@@ -71,7 +71,7 @@ export default function Navigation() {
   }, [hasAutoOpened, pathname])
 
   const navLinks = [
-    { href: '/#video-lessons', icon: faPlayCircle, text: 'VIDEOLEZIONI', id: 'video-lessons' },
+    /* { href: '/#video-lessons', icon: faPlayCircle, text: 'VIDEOLEZIONI', id: 'video-lessons' }, */
     { href: '/#about', icon: faUser, text: 'About', id: 'about' },
     { href: '/#contact', icon: faEnvelope, text: 'Contact', id: 'contact' },
   ]
